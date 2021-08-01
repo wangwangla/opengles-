@@ -17,6 +17,7 @@ import com.example.openglesexample.test.EGLBackEnvActivity;
 import com.example.openglesexample.test.EGLDemo;
 import com.example.openglesexample.test.FBOActivity;
 import com.example.openglesexample.test.FGLViewActivity;
+import com.example.openglesexample.test.HuiZhi;
 import com.example.openglesexample.test.LightActivity;
 import com.example.openglesexample.test.ObjLoadActivity;
 import com.example.openglesexample.test.ObjLoadActivity2;
@@ -25,6 +26,7 @@ import com.example.openglesexample.test.VaryActivity;
 import com.example.openglesexample.test.CameraActivity;
 import com.example.openglesexample.test.VrContextActivity;
 import com.example.openglesexample.test.ZipActivity;
+import com.example.openglesexample.ui.HuiZhiActivity;
 
 import java.util.ArrayList;
 
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mList= (RecyclerView)findViewById(R.id.mList);
         mList.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         data=new ArrayList<>();
+        add("绘画板", HuiZhiActivity.class);
         add("EGL的使用 ", EGLDemo.class);
         add("绘制形体", FGLViewActivity.class);
         add("图片处理", SGLViewActivity.class);
