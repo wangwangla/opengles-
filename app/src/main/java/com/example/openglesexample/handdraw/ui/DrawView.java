@@ -1,4 +1,4 @@
-package com.example.openglesexample.ui;
+package com.example.openglesexample.handdraw.ui;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -8,8 +8,6 @@ import android.graphics.Path;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-
-import java.util.jar.Attributes;
 
 public class DrawView extends View {
 

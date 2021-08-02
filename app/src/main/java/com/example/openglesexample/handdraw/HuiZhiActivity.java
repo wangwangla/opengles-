@@ -1,4 +1,4 @@
-package com.example.openglesexample.ui;
+package com.example.openglesexample.handdraw;
 
 import androidx.appcompat.app.AppCompatActivity;
 

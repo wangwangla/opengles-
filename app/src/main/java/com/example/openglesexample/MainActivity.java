@@ -17,7 +17,6 @@ import com.example.openglesexample.test.EGLBackEnvActivity;
 import com.example.openglesexample.test.EGLDemo;
 import com.example.openglesexample.test.FBOActivity;
 import com.example.openglesexample.test.FGLViewActivity;
-import com.example.openglesexample.test.HuiZhi;
 import com.example.openglesexample.test.LightActivity;
 import com.example.openglesexample.test.ObjLoadActivity;
 import com.example.openglesexample.test.ObjLoadActivity2;
@@ -26,7 +25,7 @@ import com.example.openglesexample.test.VaryActivity;
 import com.example.openglesexample.test.CameraActivity;
 import com.example.openglesexample.test.VrContextActivity;
 import com.example.openglesexample.test.ZipActivity;
-import com.example.openglesexample.ui.HuiZhiActivity;
+import com.example.openglesexample.handdraw.HuiZhiActivity;
 
 import java.util.ArrayList;
 

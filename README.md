@@ -63,7 +63,7 @@ animationDrawable1.start();
 ## 绘制
 
 ```java
-package com.example.openglesexample.ui;
+package com.example.openglesexample.handdraw.ui;
 
 import android.content.Context;
 import android.graphics.Canvas;
