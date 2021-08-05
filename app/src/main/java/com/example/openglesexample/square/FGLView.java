@@ -14,8 +14,8 @@ public class FGLView extends GLSurfaceView {
 
     public FGLView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init();
     }
-
 
     private void init(){
         setEGLContextClientVersion(2);

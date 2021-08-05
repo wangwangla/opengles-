@@ -12,7 +12,7 @@ import javax.microedition.khronos.opengles.GL10;
 public class FGLRender extends Shape{
 
     private Shape shape;
-    private Class<? extends Shape> clazz= null;
+    private Class<? extends Shape> clazz= Triangle.class;
 
     public FGLRender(View mView) {
         super(mView);
@@ -21,7 +21,6 @@ public class FGLRender extends Shape{
     @Override
     public void onSurfaceCreated(GL10 gl, EGLConfig eglConfig) {
         GLES20.glClearColor(0.5f,0.5f,0.5f,1.0f);
-        Log.e("wuwang","onSurfaceCreated");
         try {
             Constructor constructor=clazz.getDeclaredConstructor(View.class);
             constructor.setAccessible(true);

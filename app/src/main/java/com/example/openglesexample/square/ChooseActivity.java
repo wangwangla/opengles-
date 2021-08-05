@@ -23,7 +23,9 @@ public class ChooseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        context = this;
         setContentView(R.layout.activity_choose);
+        init();
     }
 
     private void init() {
@@ -43,8 +45,8 @@ public class ChooseActivity extends AppCompatActivity {
 
     private void initData() {
         mData = new ArrayList<>();
-//        add("三角形", Triangle.class);
-//        add("正三角形", TriangleWithCamera.class);
+        add("三角形", Triangle.class);
+        add("正三角形", TriangleWithCamera.class);
 //        add("彩色三角形", TriangleColorFull.class);
 //        add("正方形", Square.class);
 //        add("圆形", Oval.class);

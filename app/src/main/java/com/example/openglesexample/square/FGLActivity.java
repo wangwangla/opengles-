@@ -10,10 +10,7 @@ import android.widget.Button;
 import com.example.openglesexample.R;
 
 public class FGLActivity extends AppCompatActivity implements View.OnClickListener {
-
     private static final int REQ_CHOOSE=0x0101;
-
-    private Button mChange;
     private FGLView mGLView;
 
     @Override
@@ -24,8 +21,7 @@ public class FGLActivity extends AppCompatActivity implements View.OnClickListen
     }
 
     private void init(){
-        mChange= (Button) findViewById(R.id.mChange);
-        mGLView= (FGLView) findViewById(R.id.mGLView);
+        mGLView= findViewById(R.id.mGLView);
     }
 
     public void onClick(View view){

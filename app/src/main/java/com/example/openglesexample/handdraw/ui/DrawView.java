@@ -14,9 +14,9 @@ public class DrawView extends View {
     private int defaultColor =  Color.BLACK;
     private float defaultSize = 10f;
     private Paint mPaint = new Paint(){{
-        setColor(defaultColor);
-        setStrokeWidth(defaultSize);
-        setStrokeJoin(Join.ROUND);
+        setColor(defaultColor); //画笔的颜色
+        setStrokeWidth(defaultSize);//画笔的大小
+        setStrokeJoin(Join.ROUND);///
         setStrokeCap(Cap.ROUND);
         setStyle(Style.STROKE);
 

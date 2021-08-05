@@ -38,7 +38,7 @@ public class EGLRenderer extends HandlerThread {
         eglDisplay = EGL14.eglGetDisplay(EGL14.EGL_DEFAULT_DISPLAY);
         //初始化得到主次版本
         int []version = new int[2];
-        if (EGL14.eglInitialize(eglDisplay,version,0,version,1)){
+        if (!EGL14.eglInitialize(eglDisplay,version,0,version,1)){
             throw new RuntimeException("EGL error "+EGL14.eglGetError());
         }
         int []configAttribs = {
