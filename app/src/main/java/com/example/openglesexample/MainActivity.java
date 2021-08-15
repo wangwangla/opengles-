@@ -10,25 +10,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.openglesexample.animation.Camera2Activity;
+import com.example.openglesexample.blend.BlendActivity;
+import com.example.openglesexample.camera.CameraActivity;
 import com.example.openglesexample.egl.EGLActivity;
-import com.example.openglesexample.egl.EGLRenderer;
-import com.example.openglesexample.image.SGLViewActivity;
+import com.example.openglesexample.eglex.EGLBackEnvActivity;
+import com.example.openglesexample.excuteimage.VaryActivity;
+import com.example.openglesexample.fbo.FBOActivity;
+import com.example.openglesexample.light.LightActivity;
+import com.example.openglesexample.meiyan.Camera3Activity;
+import com.example.openglesexample.obj.ObjLoadActivity;
+import com.example.openglesexample.obj2.ObjLoadActivity2;
+import com.example.openglesexample.showimage.SGLViewActivity;
 import com.example.openglesexample.square.FGLActivity;
-import com.example.openglesexample.test.BlendActivity;
-import com.example.openglesexample.test.Camera2Activity;
-import com.example.openglesexample.test.Camera3Activity;
-import com.example.openglesexample.test.EGLBackEnvActivity;
-import com.example.openglesexample.test.EGLDemo;
-import com.example.openglesexample.test.FBOActivity;
-import com.example.openglesexample.test.FGLViewActivity;
-import com.example.openglesexample.test.LightActivity;
-import com.example.openglesexample.test.ObjLoadActivity;
-import com.example.openglesexample.test.ObjLoadActivity2;
-import com.example.openglesexample.test.VaryActivity;
-import com.example.openglesexample.test.CameraActivity;
-import com.example.openglesexample.test.VrContextActivity;
-import com.example.openglesexample.test.ZipActivity;
 import com.example.openglesexample.handdraw.HuiZhiActivity;
+import com.example.openglesexample.vr.VrContextActivity;
+import com.example.openglesexample.zip.ZipActivity;
 
 import java.util.ArrayList;
 

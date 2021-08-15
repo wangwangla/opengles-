@@ -36,14 +36,10 @@ public class Triangle extends Shape {
     private int mPositionHandle;
     private int mColorHandle;
 
-    private float[] mViewMatrix = new float[16];
-
     //顶点个数
     private final int vertexCount = triangleCoords.length / COORDS_PER_VERTEX;
     //顶点之间的偏移量
     private final int vertexStride = COORDS_PER_VERTEX * 4; // 每个顶点四个字节
-
-    private int mMatrixHandler;
 
     //设置颜色，依次为红绿蓝和透明通道
     float color[] = {1.0f, 1.0f, 1.0f, 1.0f};

@@ -243,10 +243,8 @@ public class EGLRenderer extends HandlerThread {
         GLES20.glUniform4f(uColor, 0.0f, 1.0f, 0.0f, 1.0f);
         // 绘制
         GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 3);
-
         // 交换显存(将surface显存和显示器的显存交换)
         EGL14.eglSwapBuffers(eglDisplay, eglSurface);
-
         EGL14.eglDestroySurface(eglDisplay, eglSurface);
     }
 }

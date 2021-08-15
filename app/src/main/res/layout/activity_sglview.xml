@@ -4,12 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".image.SGLViewActivity">
-    <com.example.openglesexample.image.SGLView
+    tools:context=".showimage.SGLViewActivity">
+    <com.example.openglesexample.showimage.SGLView
         android:id="@+id/sglView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </com.example.openglesexample.image.SGLView>
+    </com.example.openglesexample.showimage.SGLView>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+        <SeekBar
+            android:id="@+id/seekbar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="6dp"
+            android:progress="30"
+            android:max="100"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/seekbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="6dp"
+            android:progress="30"
+            android:max="100"
+            app:layout_constraintTop_toTopOf="parent" />
+        <SeekBar
+            android:id="@+id/seekbar3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="6dp"
+            android:progress="30"
+            android:max="100"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

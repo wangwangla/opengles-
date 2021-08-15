@@ -19,7 +19,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class HuiZhiActivity extends AppCompatActivity {
-
     private boolean currentState = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +26,6 @@ public class HuiZhiActivity extends AppCompatActivity {
         setContentView(R.layout.activity_hui_zhi);
         showBottomAni();
         showRightAni();
-//        getApplicationContext()
     }
 
     private boolean isShow;

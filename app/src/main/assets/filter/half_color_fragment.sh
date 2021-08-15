@@ -22,9 +22,11 @@ void main(){
     vec4 nColor=texture2D(vTexture,aCoordinate);
     if(aPos.x>0.0||vIsHalf==0){
         if(vChangeType==1){
+            //黑白的写法    每个颜色  x  一个值   得到黑白色
             float c=nColor.r*vChangeColor.r+nColor.g*vChangeColor.g+nColor.b*vChangeColor.b;
             gl_FragColor=vec4(c,c,c,nColor.a);
         }else if(vChangeType==2){
+            //红绿蓝三种颜色   增加红绿色
             vec4 deltaColor=nColor+vec4(vChangeColor,0.0);
             modifyColor(deltaColor);
             gl_FragColor=deltaColor;
