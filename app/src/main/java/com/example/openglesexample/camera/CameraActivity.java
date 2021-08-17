@@ -8,10 +8,11 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.example.openglesexample.R;
+import com.example.openglesexample.learn.Camera;
 import com.example.openglesexample.util.PermissionUtils;
 
 public class CameraActivity extends AppCompatActivity {
-    private CameraView mCameraView;
+    private Camera mCameraView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +28,7 @@ public class CameraActivity extends AppCompatActivity {
         @Override
         public void run() {
             setContentView(R.layout.activity_camera);
-            mCameraView= (CameraView)findViewById(R.id.cameraview);
+            mCameraView= (Camera) findViewById(R.id.cameraview);
         }
     };
 

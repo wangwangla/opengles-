@@ -1,4 +1,4 @@
-package com.example.openglesexample.camera;
+package com.example.openglesexample.learn;
 
 import android.content.res.Resources;
 import android.graphics.SurfaceTexture;
@@ -6,25 +6,46 @@ import android.opengl.GLES11Ext;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 
-import com.example.openglesexample.filter.OesFilter;
 import com.example.openglesexample.filter.AFilter;
+import com.example.openglesexample.filter.OesFilter;
 import com.example.openglesexample.util.Gl2Utils;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-public class CameraDrawer implements GLSurfaceView.Renderer {
-
-    private float[] matrix=new float[16];
+public class MyCameraDrawer implements GLSurfaceView.Renderer {
     private SurfaceTexture surfaceTexture;
+    private float[] matrix=new float[16];
     private int width,height;
     private int dataWidth,dataHeight;
     private AFilter mOesFilter;
     private int cameraId=1;
 
-    public CameraDrawer(Resources res){
-        mOesFilter=new OesFilter(res);
+    public MyCameraDrawer(Resources  resources){
+        mOesFilter=new OesFilter(resources);
     }
+
+    @Override
+    public void onSurfaceCreated(GL10 gl10, EGLConfig eglConfig) {
+        int texture = createTextureID();
+        surfaceTexture=new SurfaceTexture(texture);
+        mOesFilter.create();
+        mOesFilter.setTextureId(texture);
+    }
+
+    @Override
+    public void onSurfaceChanged(GL10 gl10, int i, int i1) {
+        setViewSize(width,height);
+    }
+
+    @Override
+    public void onDrawFrame(GL10 gl10) {
+        if(surfaceTexture!=null){
+            surfaceTexture.updateTexImage();
+        }
+        mOesFilter.draw();
+    }
+
     public void setDataSize(int dataWidth,int dataHeight){
         this.dataWidth=dataWidth;
         this.dataHeight=dataHeight;
@@ -57,26 +78,6 @@ public class CameraDrawer implements GLSurfaceView.Renderer {
         calculateMatrix();
     }
 
-    @Override
-    public void onSurfaceCreated(GL10 gl, EGLConfig config) {
-        int texture = createTextureID();
-        surfaceTexture=new SurfaceTexture(texture);
-        mOesFilter.create();
-        mOesFilter.setTextureId(texture);
-    }
-
-    @Override
-    public void onSurfaceChanged(GL10 gl, int width, int height) {
-        setViewSize(width,height);
-    }
-
-    @Override
-    public void onDrawFrame(GL10 gl) {
-        if(surfaceTexture!=null){
-            surfaceTexture.updateTexImage();
-        }
-        mOesFilter.draw();
-    }
 
     private int createTextureID(){
         int[] texture = new int[1];

@@ -6,10 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".camera.CameraActivity">
-    <com.example.openglesexample.camera.CameraView
+    <com.example.openglesexample.learn.Camera
         android:id="@+id/cameraview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </com.example.openglesexample.camera.CameraView>
+    </com.example.openglesexample.learn.Camera>
 </androidx.constraintlayout.widget.ConstraintLayout>

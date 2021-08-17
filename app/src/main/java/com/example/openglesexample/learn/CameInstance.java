@@ -31,7 +31,7 @@ public class CameInstance {
         sizeComparator=new CameraSizeComparator();
     }
 
-    private boolean open(int cameId){
+    public boolean open(int cameId){
         //打开
         camera = Camera.open(cameId);
         //设置参数
@@ -82,7 +82,6 @@ public class CameInstance {
             return false;
         }
     }
-
 
     private class CameraSizeComparator implements Comparator<Camera.Size> {
         public int compare(Camera.Size lhs, Camera.Size rhs) {

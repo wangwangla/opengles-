@@ -33,7 +33,6 @@ public class KitkatCamera implements ICamera {
     @Override
     public boolean open(int cameraId) {
         mCamera=Camera.open(cameraId);
-
         if(mCamera!=null){
             Camera.Parameters param=mCamera.getParameters();
             picSize=getPropPictureSize(
