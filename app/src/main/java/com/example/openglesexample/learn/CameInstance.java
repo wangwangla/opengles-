@@ -31,8 +31,6 @@ public class CameInstance {
         sizeComparator=new CameraSizeComparator();
     }
 
-
-
     public boolean open(int cameId){
         //打开
         camera = Camera.open(cameId);

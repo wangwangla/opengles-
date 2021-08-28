@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -19,7 +20,6 @@ public class DrawView extends View {
         setStrokeJoin(Join.ROUND);///
         setStrokeCap(Cap.ROUND);
         setStyle(Style.STROKE);
-
     }};
     private Path mPath = new Path();
     public DrawView(Context context) {
