@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.openglesexample">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-feature
         android:glEsVersion="0x00020000"
@@ -37,7 +36,9 @@
         <activity android:name=".square.FGLActivity" />
         <activity android:name=".egl.EGLActivity" />
         <activity android:name=".handdraw.HuiZhiActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
